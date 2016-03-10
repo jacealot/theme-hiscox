@@ -1,0 +1,1687 @@
+// *****************************
+// HEADER
+.lp-page-header{
+  padding-top: 0 !important;
+
+
+
+  .lp-content-advanced{
+    padding: 0 10px;
+
+    &.bd-imageText-wrapper{
+      height:75px;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+
+// FOOTER
+.lp-page-footer   {
+  margin-top: 15px;
+}
+
+
+// *****************************
+// GRADIENT BUTTON
+.btn{
+  &.Gradient{
+    width:100%;
+    font-size: @fontSizeLarge;
+    background-position: left -406px;
+    margin:5px 0 10px;
+
+    span{
+      background-position: right -326px;
+      line-height: 36px;
+    }
+
+    &:hover{
+      background-position: left -446px;
+      span{
+        background-position: right -366px;
+      }
+
+    }
+  }
+}
+
+
+// *****************************
+// MODAL
+.modal {
+  .close {
+    background: url(@close);
+    font-size: 23px;
+    font-weight: normal;
+    height: 28px;
+    line-height: 1;
+    opacity: 1;
+    position: absolute;
+    right: -14px;
+    top: -16px;
+    width: 30px;
+  }
+
+  .modal-body {
+    p{
+      color: @black!important;
+    }
+  }
+}
+
+
+  // *****************************
+  // FORM DIM
+  .question-dim(@class, @dim){
+    (~".@{class}"){
+
+      .control-label{
+        width: @dim;
+      }
+
+      .controls{
+        margin-left: @dim;
+      }
+
+      .KeepTogether {
+        .aq-textitem{
+          width: @dim;
+
+          &.listitem{
+            width: @dim - 13;
+          }
+        }
+      }
+
+      .btn.forgottenpassword{
+        margin-left: @dim;
+        float:none;
+      }
+
+    }
+  }
+
+  .input-dim(@class, @dim){
+    (~".@{class}"){
+      input[type="text"],
+      input[type="password"],
+      .uneditable-input{
+        width: @dim!important;
+      }
+      select{
+        width: @dim + 8!important;
+      }
+    }
+  }
+
+  .input-dim('inputauto'){
+    .inputauto{
+      input[type="text"],
+      input[type="password"],
+      .uneditable-input{
+        width: auto;
+      }
+      select{
+        width: auto!important;
+      }
+    }
+  }
+
+  .form-horizontal .Columns{
+    .control-label{
+      width: 50%;
+    }
+
+    .controls{
+      margin-left: 50%;
+    }
+  }
+  .question-dim('form-horizontal',  302px);
+  .question-dim('questionsmall',  180px);
+  .question-dim('questionmedium', 230px);
+  .question-dim('questionlarge',  302px);
+
+  .input-dim('form-horizontal',  140px);
+  .input-dim('inputsmall',  140px);
+  .input-dim('inputmedium', 180px);
+  .input-dim('inputlarge',  250px);
+
+  .input-dim('inputauto');
+  // *****************************
+
+  // *****************************
+  // PAGE TITLE & SUBTITLE
+  h1 {
+    line-height: 1.2;
+    color: @red;
+    font-size: 22px;
+    margin: 6px 0 15px;
+    &.inline{
+      display:inline-block;
+    }
+    & +div.inline{
+      display:inline-block;
+      margin-top:8px;
+    }
+
+    &.form-title{
+      max-width: 390px;
+    }
+  }
+
+  .subtitle {
+    color: @gray;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2em;
+    padding: 0.6em 0.5em 0.3em 0;
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // PANEL WITH CONFIRM CHECKBOX
+  .confirmcheckbox{
+    border-top: 2px solid @black;
+    margin: 0 -20px;
+    padding: 10px 20px 0 !important;
+
+    h2{
+      color:@red;
+    }
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // PANEL WITH RED BORDER
+  .panelwarning{
+    border: 1px solid @red;
+    margin: 20px -10px;
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // SELECTION OF BUSINESS & STATE
+  .selection{
+    margin-bottom: 10px;
+
+    span{
+      margin-right: 7px;
+      .btn-link{
+        font-weight: bold;
+      }
+    }
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // REFERENCE NUMBER
+
+
+  .aq-page{
+    position: relative;
+
+    .control-group.BoldTopRight {
+      position: absolute;
+      right: 0;
+      top: 13px;
+
+      .control-label {
+        width: auto;
+
+        label{
+          font-weight: bold;
+          color:@gray;
+          font-size: 14px;
+          margin-right: 0px;
+        }
+      }
+
+      .controls {
+        float: left;
+        margin: 0;
+        margin:-1px 20px -2px 0;
+
+        .uneditable-input{
+          font-weight: bold;
+          color:@gray;
+          font-size: 14px;
+          width:auto!important;
+        }
+      }
+    }
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // DATEPICKER
+  .ui-datepicker {
+    margin-left: -17px;
+    border-radius:0;
+    background: @white;
+
+    .ui-datepicker-header{
+      background: transparent;
+      border: none;
+
+      select{
+        margin: 0 1%;
+        width: 48%;
+      }
+
+      .ui-datepicker-prev {
+        background: url("@{iconimage}") no-repeat scroll -2px -3px;
+        left: 2px;
+        top:9px !important;
+      }
+      .ui-datepicker-next {
+        background: url("@{iconimage}") no-repeat scroll -24px -3px;
+        right: 2px;
+        top:9px !important;
+      }
+    }
+    .ui-state-active{
+      background: @red;
+      color: @white;
+    }
+    &:before{
+      border:none;
+    }
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // BREADCRUMB
+  @maxNumberOfStep : 8;
+
+  .breadcrumb{
+    font-weight: bold;
+    list-style: none outside none;
+    margin: 41px 0 19px -25%;
+    padding: 0!important;
+    text-align: center;
+    width: 150%;
+
+    li{
+      display: inline;
+      float: left;
+      margin: 0;
+      width : 100% / @maxNumberOfStep;
+      position: relative;
+      min-height: 45px;
+
+      hr{
+        border-top: 2px solid @grayLight;
+        top: -2px;
+        left: 50%;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      .step{
+        display: block;
+        width:100%;
+        line-height: 1.1;
+        position: relative;
+        text-decoration: none;
+        margin-top: 18px;
+
+        i{
+          background: url("@{breadcrumb}") no-repeat scroll -75px 0px;
+          display: block;
+          height: 28px;
+          left: 50%;
+          margin-left: -13px;
+          position: absolute;
+          top: -33px;
+          width: 28px;
+          font-weight: bold;
+          font-style: normal;
+          line-height: 26px;
+          text-indent: -2px;
+          z-index: 1;
+          overflow: hidden;
+        }
+      }
+
+      &.past {
+        hr{
+          border-color:@red;
+        }
+        .step{
+          i{
+            background-position: 0px 0px;
+            text-indent: -999px;
+          }
+        }
+      }
+
+      &.active .step{
+        color:@red;
+
+        i{
+          background-position: -38px 0;
+          color: @white;
+        }
+      }
+
+      &.first{
+      }
+
+      &.last{
+        hr{
+          display: none;
+        }
+      }
+    }
+  }
+  .breadcrumbMargin(@numberOfStep) {
+    (~".step@{numberOfStep}") {
+      li.first{
+        margin-left: ((100% / @maxNumberOfStep) * (@maxNumberOfStep - @numberOfStep))  / 2!important;
+      }
+    }
+  }
+  .breadcrumbMargin(4);
+  .breadcrumbMargin(5);
+  .breadcrumbMargin(6);
+  .breadcrumbMargin(7);
+  .breadcrumbMargin(8);
+  // *****************************
+
+
+
+
+
+
+  // *****************************
+  // SMALL LABEL
+  .subtext{
+    font-size:@fontSizeSmall;
+    color: @gray;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // LABEL AND TEXT TOGHETER
+  .KeepTogether{
+    .aq-textitem {
+      margin-top: -9px;
+      color: @black;
+    }
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // ZEBRA CONTAINER
+  .Zebra {
+    > .content{
+      > .row-fluid{
+        margin: -1px -20px 0;
+        padding: 15px 20px 6px !important;
+        border-bottom:1px solid @grayLight;
+        border-top:1px solid @grayLight;
+        margin-top:-1px;
+
+        &.graybg{
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // PANEL WITH ROUNDED BORDER
+  .panel{
+    position: relative;
+    margin-bottom: 12px;
+
+    h2 {
+      font-size: 12px;
+      line-height: 2;
+      margin: 0 0 5px;
+    }
+
+    .form_actions{
+      padding-bottom:0;
+    }
+  }
+  // *****************************
+
+
+
+
+  .rounded{
+
+    > .content{
+      margin: 8px 12px;
+    }
+
+    h1{
+      border-bottom: 1px solid @grayLight;
+      margin: 0 -12px 12px;
+      padding: 0 19px 8px;
+    }
+
+    .btn {
+      float: right;
+      margin-bottom: 15px;
+      clear: both;
+    }
+
+    .bl, .br, .tl, .tr{
+      position: absolute;
+      background: url("@{rounded-gray}");
+      width:8px;
+      height:8px;
+      display: block;
+      z-index: 1;
+    }
+
+    .bl{
+      left:-1px;
+      bottom:-1px;
+      background-position: left bottom;
+    }
+    .br{
+      right:-1px;
+      bottom:-1px;
+      background-position: right bottom;
+    }
+    .tl{
+      left:-1px;
+      top:-1px;
+      background-position: left top;
+    }
+    .tr{
+      right:-1px;
+      top:-1px;
+      background-position: right top;
+    }
+
+    &.panel{
+      background-color: @grayLighter;
+      border: 1px solid @grayLight;
+
+      > .bl,
+      > .br,
+      > .tl,
+      > .tr{
+        background-image: url("@{rounded-gray}");
+      }
+
+      &.white{
+        background-color: @white;
+      }
+    }
+
+    &.highlight{
+      border: 1px solid @grayLight;
+    }
+  }
+
+
+
+  // *****************************
+  // ERROR MESSAGGE
+  .error{
+    background: @orange;
+    margin: 0 -10px 5px !important;
+    padding: 5px 10px;
+
+
+    ul.errorlist{
+      color:@red;
+      font-weight: bold;
+      clear: both;
+      list-style: none outside none;
+      margin: 3px 0 0 0;
+
+      li{
+        position: relative;
+        padding-left: 22px;
+        margin-bottom: 3px;
+        list-style: none outside none;
+
+        .icon-error{
+          left: 0;
+          position: absolute;
+          top: 1px;
+        }
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .panel &{
+      margin: 0 -5px 5px !important;
+      padding: 5px;
+    }
+
+    &.errorontop{
+      margin: 0 -20px 10px -20px!important;
+    }
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // ICON IMAGE
+
+  .btn{
+    .icon-reload {
+      background: url("@{iconimage}") no-repeat -114px -51px;
+    }
+    .icon-back{
+      background: url("@{iconimage}") no-repeat scroll -49px -7px;
+    }
+
+    &.btn-inverse{
+      .icon-reload {
+        background-position: -91px -29px;
+      }
+      .icon-back{
+        background-position: -4px -7px;
+      }
+    }
+  }
+
+  .icon-continue{
+    background: url("@{iconimage}") no-repeat scroll -71px -7px;
+  }
+  .icon-save{
+    background: url("@{iconimage}") no-repeat scroll -48px -29px;
+  }
+  .icon-error{
+    background: url("@{iconimage}") no-repeat scroll -164px -66px;
+  }
+  .icon-print{
+    background: url("@{iconimage}") no-repeat scroll -5px -29px;
+  }
+  .icon-calendar {
+    background: url("@{iconimage}") no-repeat scroll -136px -40px!important;
+  }
+  .icon-explain {
+    background: url("@{iconimage}") no-repeat -164px -40px;
+  }
+  .icon-loader {
+    background: url("@{loader}") no-repeat;
+    height: 56px !important;
+    width: 53px !important;
+  }
+  .icon-facebook{
+    background: url("@{social}") no-repeat -78px 0px;
+  }
+  .icon-twitter{
+    background: url("@{social}") no-repeat -52px 0px;
+  }
+  .icon-googleplus{
+    background: url("@{social}") no-repeat -104px 0px;
+  }
+  .icon-linkedin{
+    background: url("@{social}") no-repeat -130px 0px;
+  }
+  .icon-youtube{
+    background: url("@{social}") no-repeat -26px 0px;
+  }
+  .icon-rss{
+    background: url("@{social}") no-repeat 0px 0px;
+  }
+  button.change,
+  button.change:hover {
+    background: transparent url("@{iconimage}") no-repeat -164px -18px !important;
+    height: 18px;
+    width: 18px;
+    display: block;
+    position: relative;
+
+    span{
+      display: none;
+    }
+  }
+  [class^="icon-"],
+  [class*=" icon-"]{
+    width:  @iconWidth;
+    height: @iconHeight;
+  }
+  // *****************************
+
+
+
+  // *****************************
+  // BUTTON ON THE FOOTER
+  .form_actions .content{
+    @spaceBetweenButton: 8px;
+
+    .btn{
+      margin-left: @spaceBetweenButton;
+      float:right;
+      clear: none;
+
+      &.btn-inverse{
+        float:left;
+        margin-left:0px;
+        margin-right: @spaceBetweenButton;
+        &.logout{
+          float:right;
+        }
+      }
+    }
+  }
+  // *****************************
+
+
+
+
+
+
+  // *****************************
+  // FORM
+  .control-group{
+
+    // Standard label
+    .control-label{
+      label{
+        margin-right: 15px;
+      }
+    }
+    .controls{
+      .uneditable-input{
+        &.state{
+          text-transform: uppercase;
+        }
+        &.currency{
+          width:80px!important;
+        }
+      }
+      .checkbox{
+        display: inline-block;
+      }
+    }
+
+    &.AnswerBold{
+      .control-label{
+        label{
+          color: inherit;
+          font-size: 13px;
+          font-weight: bold;
+          margin-top: 1px;
+        }
+      }
+      .controls {
+        span{
+          width: auto;
+          font-weight: bold;
+          font-size: 16px;
+          color:@black;
+        }
+      }
+    }
+
+    &.Bold {
+      .control-label{
+        label{
+          font-weight: bold;
+        }
+      }
+    }
+
+    &.formvertical{
+      .control-label{
+        float: none;
+        width: auto;
+        margin-bottom: 2px;
+      }
+      .controls {
+        margin-left: 0;
+      }
+    }
+
+    // Style when you hide the label
+    &.hidelabel {
+      .control-label{
+        display: none;
+      }
+      .controls {
+        margin-left: 0!important;
+      }
+    }
+
+
+    .fieldset &{
+      &.textarea .controls,
+      .control-label label{
+        margin-left: -10px;
+        padding-left: 20px;
+      }
+
+      .controls{
+        .checkbox{
+          margin-left: 10px;
+        }
+      }
+
+      .errorlist{
+        padding-left: 8px;
+      }
+    }
+
+
+    // Style when you want to hide the answer
+    &.HideAnswer {
+      .control-label{
+        display: inline-block;
+        width: auto!important;
+
+        label{
+          color:@textColor;
+        }
+      }
+      .controls {
+        margin: 0 !important;
+        position: absolute !important;
+        right: 10px;
+
+        > * {
+          display:none;
+
+          &.add-on{
+            display: block;
+          }
+        }
+      }
+    }
+
+    // style for textarea
+    &.textarea{
+      .control-label{
+        float:none;
+        display: inline;
+      }
+      .controls {
+        float: none;
+        margin-left: 0;
+        margin-right: 6px;
+
+        textarea{
+          width: 100%;
+        }
+      }
+
+      .explainbutton {
+        margin-right: 0px;
+
+        textarea{
+          width: 493px;
+        }
+
+        .add-on{
+          top: -18px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+  .highlight {
+    position: relative;
+    margin-bottom:20px;
+
+    &:last-child{
+      margin-bottom:0;
+    }
+
+    .headerfield{
+      background: url("@{backgroundHeader}") repeat-x scroll 0 bottom @grayLighter;
+      margin: 0 -12px -9px !important;
+      padding: 5px 12px !important;
+      display: block;
+
+
+      .control-label{
+        width: auto;
+
+      }
+      .control-group{
+        margin-bottom: 0;
+      }
+
+      label{
+        font-weight: bold;
+        color: @red;
+      }
+      .controls {
+        float: right;
+        margin: 0;
+      }
+    }
+
+    .highlightTitle {
+      background: url("@{backgroundTitle}") repeat-x scroll 0 100%;
+      height: 55px;
+      margin: -10px -12px 12px;
+      font-size:16px;
+      font-weight:700;
+      color:@red;
+      line-height: 55px;
+      padding-left: 15px;
+      width:auto;
+
+      .change {
+        display: inline;
+        float: none;
+        margin-left: 10px;
+        margin-top: 13px;
+        z-index: 1;
+        position: inherit;
+      }
+
+      .TitleLinks {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        line-height: 15px;
+
+        .content{
+          margin:0;
+
+          p {
+            text-align: right;
+            margin: 0 0 2px;
+            padding:0;
+
+            .btn-link {
+              background: url("@{pdfIcon}") no-repeat 0 0;
+              margin: 0;
+              padding: 2px 0 3px 25px;
+              color:@black;
+              font-size:11px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+
+    &.splitcolumn {
+
+      .Columns{
+        background: url("@{verticalLine}") repeat-y scroll center 0;
+        margin-top: -15px;
+        padding-top: 15px;
+
+        .column2{
+          padding-left: 12px;
+        }
+      }
+
+      .headerfield{
+        position: relative;
+
+        .controls {
+
+          .radio{
+            display: block;
+          }
+
+          .radio1{
+            position: absolute;
+            left: 10px;
+            top: 7px;
+          }
+        }
+      }
+
+      .column3{
+        text-indent: 30px;
+      }
+
+
+
+      .or1,
+      .or2{
+        color: #909090;
+        position: absolute;
+        left: 50%;
+
+        &.or1{
+          font-size: 21px;
+          color:#9E9E9E;
+          margin-left: -14px;
+          top: -1px;
+        }
+
+        &.or2{
+          color: @red;
+          font-size: 17px;
+          font-weight: bold;
+          line-height: 1;
+          margin-left: -13px;
+          z-index: 1;
+          margin-bottom: -9px;
+          bottom: 50%;
+        }
+      }
+    }
+
+
+
+  }
+
+
+
+
+  .GroupInline {
+
+    .control-group {
+      float: left;
+      display: block;
+
+      .controls {
+        .add-on.aq-field-before {
+          margin-left: -5px;
+        }
+      }
+
+      select{
+        width: 100px !important;
+      }
+
+      .uneditable-input {
+        display: inline;
+      }
+
+      &.Bold{
+        .controls{
+          .add-on,
+          .uneditable-input{
+            font-weight: bold;
+            font-size: 16px;
+            color: @black;
+          }
+
+          .uneditable-input{
+            margin-top: -3px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .priceRecap{
+    margin-top: 15px;
+
+    .control-group{
+
+      .control-label{
+        label{
+          font-size:16px;
+          font-weight:bold;
+          color:@gray;
+
+          input{
+            margin-right: 10px;
+            margin-top: -1px;
+          }
+        }
+      }
+
+      .controls{
+        .uneditable-input{
+          margin-top: -2px;
+          width: auto !important;
+        }
+
+        .uneditable-input,
+        .add-on{
+          font-weight: bold;
+          font-size: 16px;
+          color: @red;
+          margin-left: 0;
+          width: auto;
+        }
+        position: relative;
+        top: -3px;
+      }
+
+      &.OR{
+        .uneditable-input{
+          color: @gray;
+          font-size: 12px;
+          font-weight: normal;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+  }
+
+
+  .control-group {
+
+    &.form-inline{
+      .uneditable-input,
+      select,
+      input{
+        width:auto!important;
+        margin-right: 5px;
+      }
+    }
+  }
+
+
+  .controls {
+    .add-on {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      height: @baseLineHeight;
+      min-width: 16px;
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: -7px;
+      margin-left: 5px;
+
+      &.aq-field-before {
+        margin-left: -16px;
+        position: relative;
+        top: 1px;
+        display: inline;
+        float: left;
+      }
+    }
+  }
+
+
+  .aq-required {
+    color: @red;
+    font-size: bold;
+  }
+
+
+
+  .aq-field-type-currency input {
+    width: 186px;
+  }
+
+
+
+  .GroupInline {
+
+    .control-group  {
+      float: left;
+      display: block;
+
+      .control-label,
+      .controls {
+        float: none;
+        margin-left: 0;
+        width: auto;
+        margin-right: 15px;
+      }
+      .control-label{
+        margin-bottom: 5px;
+        label{
+          font-weight: bold;
+          color:@gray;
+        }
+      }
+    }
+  }
+
+
+  .listitem{
+    list-style-type: disc!important;
+    margin-left: 13px;
+
+    li{
+      list-style-type: disc!important;
+    }
+  }
+
+  .btn {
+    &.hidden{
+      display: none;
+    }
+    &.changeproduct{
+      float: left;
+      margin-top: 10px;
+    }
+  }
+
+
+  h2 {
+    font-size: 15px;
+    line-height: 1;
+    margin: 0 0 10px;
+
+    .change{
+      display: inline-block !important;
+      float: none !important;
+      margin-bottom: 0 !important;
+      margin-left: 5px;
+      margin-top: -2px;
+    }
+  }
+
+
+  .social{
+    li{
+      margin-right:5px;
+      display: inline-block;
+
+      a{
+        height: 16px !important;
+        width: 16px !important;
+      }
+    }
+  }
+
+
+
+  .black{
+    color: @black;
+  }
+
+  iframe.payment{
+    margin-left: -20px;
+  }
+
+
+
+  .loader {
+    left: 50%;
+    margin-left: -150px;
+    margin-top: 105px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    width: 300px;
+
+    .round-body{
+      padding: 0 10px;
+    }
+  }
+
+  .page-loader-mask {
+    z-index: 9998;
+    background-color: #fff;
+    .opacity(80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .page-loader {
+    display: none;
+    z-index: 9999;
+    padding: 15px 5px;
+    background-color: #fff;
+    text-align: center;
+
+    border: 1px solid #e0e0e0;
+    .border-radius(6px 6px 6px 6px);
+
+    width: 280px;
+    height: 160px;
+    margin-left: -140px;
+    margin-top: -80px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    .page-loader-message {
+      font-weight: bold;
+      font-size: 130%;
+      line-height: 25px;
+      color:@black;
+    }
+
+    .page-loader-text {}
+
+    img {
+      margin: 10px auto;
+    }
+
+    .page-loader-slogan {
+      color: #BE0000;
+      font-weight: bold;
+      font-size: 135%;
+    }
+  }
+
+  #runtime {
+    margin-bottom: 20px;
+
+    .timeout{
+      h1{
+        line-height: 1.3;
+      }
+
+      padding-bottom: 100px;
+    }
+
+    .landingpage {
+      min-height: 297px;
+      background-color: @red;
+      text-align: center;
+      overflow: visible;
+      padding: 0 17px;
+
+      h1 {
+        line-height: 1.1;
+        margin:15px 0 10px;
+        color:@white;
+        text-shadow: 0 1px #444;
+      }
+
+      p {
+        margin-bottom: 0;
+        color:#fff;
+      }
+
+      .add-on,
+      label{
+        display: none;
+      }
+
+      button.link {
+        display:inline;
+        color:#fff;
+
+        &+p{
+          display: inline;
+        }
+      }
+
+      .Hidden{
+        display:none;
+      }
+
+      .bp-widget-body & select{
+        display: none;
+      }
+    }
+
+  }
+
+
+
+  .color(@class, @color) {
+
+    (~".lp-@{class}") {
+      color : (~"@{color}");
+
+      .nicEdit-pane & {
+        border: 1px solid #000000;
+        color: #000000;
+        display: block;
+        height: 16px;
+        line-height: 16px;
+        margin: 3px 0;
+        text-indent: 24px;
+        width: 16px;
+        background-color: (~"@{color}");
+      }
+    }
+
+  }
+
+  .mb{
+    margin-bottom: 10px;
+  }
+
+  .color('white',   '#ffffff');
+  .color('gray-01', '#e8e8e8');
+  .color('gray-02', '#d9d9d9');
+  .color('gray-03', '#e0e0e0');
+  .color('gray-04', '#b6b6b6');
+
+  .color('gray-05', '#c1c1c1');
+  .color('gray-06', '#878787');
+  .color('gray-07', '#616161');
+
+  .color('gray-08', '#424242');
+  .color('gray-09', '#303030');
+  .color('gray-10', '#3c3c3c');
+
+  .color('black',   '#000000');
+  .color('red',   '#d52b1e');
+
+  ul, li {
+    list-style: disc outside none;
+  }
+
+
+  .table{
+    margin-top: @baseLineHeight;
+
+    td,
+    th{
+      line-height: 26px;
+      text-align: center;
+    }
+
+    .btn{
+      /*width: 100%;*/
+    }
+  }.ui-datepicker .ui-icon {
+     //fix image not found
+     background-image: none;
+   }
+
+  .with-button-change{
+
+    .change{
+      clear: inherit;
+      display: inline-block!important;
+      float: none;
+      margin: -5px 0 0 10px;
+    }
+  }
+
+  .loader-form{
+    background: url("@{loader}") no-repeat scroll;
+    display: block;
+    height: 56px;
+    margin: 10px auto;
+    width: 53px;
+  }
+
+
+
+  // PAGE EXCEPTION
+  #change_your_business_type_and_state_1{
+    #BusinessCategoryAndPrimaryBusiness_1{
+      margin-top:30px;
+
+      .control-label{
+        width:150px;
+
+        label{
+          font-weight: bold;
+          color: @gray;
+        }
+      }
+      .controls{
+        margin-left: 150px;
+
+        select{
+          width:auto !important;
+        }
+      }
+    }
+
+    .AnswerAlign{
+      margin-left: 150px;
+    }
+  }
+
+  .nav{
+    list-style: none outside none;
+
+    li{
+      list-style: none outside none;
+    }
+  }
+
+  .HideAnswer{
+    .control-label{
+      .add-on{
+        display: inline;
+      }
+    }
+  }
+
+
+  .ie7,
+  .ie8,
+  .aq-ie7 select:focus,
+  .aq-ie8 select:focus {
+    width: auto !important;
+    min-width: 148px;
+  }
+
+
+  .pullright{
+    .pull-right;
+  }
+
+  .PopupLink{
+    .btn-link();
+  }
+
+
+// *****************************
+// REDIFINE THE COLUMNS DIMENSION
+.hx-formspage .lp-columns {
+
+  > .span3 {
+    width:22%;
+  }
+
+  > .span6 {
+    width:56%;
+
+    #runtime .container-fluid{
+      padding:0 20px;
+    }
+  }
+}
+
+
+// *****************************
+// MOVE DOWN THE 2 SIDES WIDGET IN CASE THE FORMS BREADCRUM IS IN THE SCREEN
+.formBreadcrumb .lp-columns > .span3{
+  padding-top: 105px !important;
+}
+
+
+// *****************************
+// GENERAL LAYOUT
+.lp-columns{
+
+  .hx-title{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+
+// *****************************
+// ROUNDED CONTAINER
+.round-top{
+  height: 12px;
+  background: url('../img/corners.png') no-repeat;
+
+  .round-center {
+    border-top: 1px solid #eee;
+  }
+  .round-right {
+    background-image: url("../img/corners.png");
+    background-position: right -14px;
+    background-repeat: no-repeat;
+  }
+}
+
+.round-bottom {
+  height: 12px;
+  background: url('../img/corners.png') no-repeat;
+  background-position: 0 -28px;
+
+  .round-center {
+    border-bottom: 1px solid #eee;
+  }
+  .round-right {
+    background-image: url("../img/corners.png");
+    background-position: right -42px;
+    background-repeat: no-repeat;
+  }
+}
+.round-center {
+  background:#fff;
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 12px;
+}
+.round-body{
+  background: #fff;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+
+
+// *****************************
+// ROUNDED CORNER WITH SCRIPS
+.hx-rounded-corners {
+  background: #fff;
+  border:1px solid #eee;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  behavior: url('../img/PIE.htc');
+}
+
+
+// *****************************
+// BACKGOUND PAGE
+.hx-formspage .lp-page-main,
+.hx-formspage .lp-page-main {
+  background : #f7f7f7;
+}
+
+
+
+
+
+.lp-content-advanced table td ul {
+  margin-left: 55px;}
+
+.lp-content-advanced table td ul li,  .text-panel  ul li {
+  list-style-type: disc; display: list-item;
+}
+
+table .text-panel  ul li {
+  list-style-type: none;
+}
+
+.text-panel h2 {
+  color:#d5261e;
+  font:bold 16px/20px "arial", "helvetica", "sans-serif";
+}
+
+
+
+
+
+
+
+.designMode .hx-formspage .bbf-forms-csi {
+  margin-top: 120px;
+}
+
+
+div.hx-formspage .lp-columns .bp-area.span6 {
+  z-index: 3;
+}
+
+.bd-designMode-true .bp-tCont-body>.bp-container {
+  padding: 0;
+}
+
+
+div.hx-portalpage .lp-columns .bp-area.span3 .bp-widget:first-child +.bp-widget {
+  z-index:-1;
+}
+
+.designMode div.hx-portalpage .lp-columns .bp-area.span3 .bp-widget:nth-child(2) {
+  z-index:0;
+}
+
+
+
+
+
+.aq-page {
+  position: static !important;
+}
+
+.runtime .page {
+  position: relative !important;
+}
+
+
+.bp-tCont-head.bp-hoverbar.bd-gradient {
+  overflow: auto;
+  position: static;
+  height: 38px;
+  display: inherit;
+}
